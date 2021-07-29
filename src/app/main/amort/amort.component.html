@@ -1,0 +1,25 @@
+<form [formGroup]="amortForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <mat-label>
+        Loan Amount:</mat-label>
+      <input type="text" formControlName="loanAmount" matInput>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>
+        Years to Pay:</mat-label>
+      <input type="text" formControlName="years" matInput>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>
+        Interest:</mat-label>
+      <input type="text" formControlName="interest" matInput>
+    </mat-form-field>
+  </p>
+  <button type="submit" mat-raised-button>Submit</button>
+</form>
+<h1 *ngIf="showMonthlyPayment"  class="mat-display-2">{{monthlyPayment}}</h1>
